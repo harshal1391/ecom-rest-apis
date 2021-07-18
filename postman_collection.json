@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "90298dc3-354a-4690-a8e3-f4965d53403f",
+		"name": "products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IPhone 10\",\r\n    \"description\": \"Smart phone by Apple\",\r\n    \"price\": 39000.0,\r\n    \"quantity\": 200,\r\n    \"category\": \"Mobiles\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/admins/products/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"admins",
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Samsung Galaxy A50\",\r\n    \"description\": \"Dual SIM smart phone by Samsung\",\r\n    \"price\": 15000.0,\r\n    \"category\": \"Mobiles\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/admins/products?category=Laptops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"admins",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Laptops"
+						},
+						{
+							"key": "name",
+							"value": "OnePlus",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"email\": \"john.doe@mail.com\",\r\n    \"password\": \"password\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit customer profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"password\": \"password\",\r\n    \"phone\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/edit-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"edit-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer - s & f products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"password\": \"password\",\r\n    \"phone\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/products?category=Laptops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Laptops"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer - Product details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"password\": \"password\",\r\n    \"phone\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/products/60f450e819bb912fb45e3748",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"products",
+						"60f450e819bb912fb45e3748"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart - Add products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"productId\": \"60f450e819bb912fb45e3748\",\r\n    \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/carts/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"carts",
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart - Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/carts?email=john.doe@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"carts"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "john.doe@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order - Place order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"John Doe\",\r\n\t\"email\": \"john.doe@mail.com\",\r\n\t\"createdDate\": \"2021-07-17\",\r\n\t\"paymentMethod\": \"UPI\",\r\n\t\"address\": \"complete address here\",\r\n\t\"shippingMethod\": \"Free\",\r\n\t\"deliveryDate\": \"2021-07-25\",\r\n\t\"items\": [\r\n\t\t{\r\n\t\t\t\"productId\": \"60f450e819bb912fb45e3748\",\r\n            \"productName\": \"lenovo 570v\",\r\n            \"price\": 20000.0,\r\n\t\t\t\"quantity\": 1\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders/place-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order - Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders/60f458155f72e93168cece17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"60f458155f72e93168cece17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order - Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/orders?email=john.doe@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "john.doe@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
